@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schoolarly</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google fonts (popins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+
+    <!--SwiperJs starts-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!--SwiperJs endss-->
+
+    <!-- Icons -->
+
+    <link rel="stylesheet" href="./icons/remixicon.css" />
+
+    <!--  -->
+  </head>
+  <body theme-data="light">
+    <!-- Header -->
+    <header>
+      <!-- The container -->
+      <div class="container header">
+        <!-- Logo -->
+        <h3 class="normal-text">SCHOOLARLY</h3>
+        <!-- Navigations -->
+        <nav id="nav" class="">
+          <ul class="nav">
+            <span class="menu-bar-icon-close">
+              <i id="close-menu" class="ri-close-fill icon menu-bar-icon"></i>
+            </span>
+            <a href="#">
+              <li class="nav-item">Home</li>
+            </a>
+            <a href="#categories">
+              <li class="nav-item">Categories</li>
+            </a>
+            <a href="#services">
+              <li class="nav-item">Services</li>
+            </a>
+            <a href="#testimonial">
+              <li class="nav-item">Testimonial</li>
+            </a>
+            <a href="#contact">
+              <li class="nav-item">Contacts</li>
+            </a>
+          </ul>
+        </nav>
+        <!-- CTA (Call To Action) -->
+        <span class="header-cta">
+          <i id="theme-toggle" class="ri-moon-fill icon theme-toggle-icon"></i>
+          <i id="open-menu" class="ri-menu-fill icon menu-bar-icon"></i>
+        </span>
+      </div>
+    </header>
+    <!-- ---------- -->
+
+    <!-- Main web content -->
+    <main>
+      <!-- Hero section -->
+      <section id="home" class="container hero">
+        <!-- Text content -->
+        <div class="hero-text-content">
+          <span class="section-header">Welcome</span>
+          <h2 class="hero-main-text">
+            Ignite your career by mastering new skills.
+          </h2>
+          <span class="sub-text hero-sub-text">
+            Fuel your journey with expertise, opening doors to unprecedented
+            opportunities and achievements. Embrace the thrill of growth and
+            propel yourself to new heights in your chosen field.
+          </span>
+          <!-- CTA -->
+          <button class="primary-button hero-cta">Get started</button>
+        </div>
+        <!-- Illustration -->
+        <img src="./images/hero.svg" class="hero-image" />
+      </section>
+
+      <!-- Categories section -->
+
+      <section class="container card categories-container" id="categories">
+        <span class="section-header">Categories</span>
+        <h2 class="main-text">More varieties to choose from</h2>
+        <!-- <h2 class="categories-main-text">Categories</h2> -->
+        <div class="grid categories-grid">
+          <div class="categories-item">
+            <i class="ri-btc-fill icon categories-item-icon"></i>
+            <h4 class="categories-item-title">Blockchain</h4>
+            <span class="sub-text categories-item-desc"
+              >Explore the transformative realm of Blockchain, a compelling
+              category to master and ignite your career through cutting-edge
+              skills.</span
+            >
+          </div>
+          <div class="categories-item">
+            <i class="ri-palette-fill icon categories-item-icon"></i>
+            <h4 class="categories-item-title">Graphics design</h4>
+            <span class="sub-text categories-item-desc"
+              >Dive into the dynamic world of Graphic Design, a captivating
+              category to master and elevate your career through creative
+              expertise.</span
+            >
+          </div>
+          <div class="categories-item">
+            <i class="ri-live-fill icon categories-item-icon"></i>
+            <h4 class="categories-item-title">Video making</h4>
+            <span class="sub-text categories-item-desc"
+              >Embark on the exciting journey of Video Making, a dynamic
+              category to master and enhance your career through visual
+              storytelling prowess.</span
+            >
+          </div>
+          <div class="categories-item">
+            <i class="ri-code-s-slash-fill icon categories-item-icon"></i>
+            <h4 class="categories-item-title">Software development</h4>
+            <span class="sub-text categories-item-desc"
+              >Immerse yourself in the realm of Software Development, a pivotal
+              category to master and propel your career through innovative
+              coding and problem-solving skills.</span
+            >
+          </div>
+          <div class="categories-item">
+            <i class="ri-megaphone-fill icon categories-item-icon"></i>
+            <h4 class="categories-item-title">Digital marketing</h4>
+            <span class="sub-text categories-item-desc"
+              >Enter the realm of Digital Marketing, a strategic category to
+              master and elevate your career through impactful online promotion
+              and brand building.</span
+            >
+          </div>
+          <div class="categories-item">
+            <i class="ri-bubble-chart-fill icon categories-item-icon"></i>
+            <h4 class="categories-item-title">Project Management</h4>
+            <span class="sub-text categories-item-desc"
+              >Embark on the realm of Project Management, a pivotal category to
+              master, enabling you to orchestrate successful initiatives and
+              advance your career through effective planning and
+              execution.</span
+            >
+          </div>
+        </div>
+
+        <!-- More button -->
+        <button class="primary-button hero-cta">More options</button>
+      </section>
+
+      <!-- Services section -->
+
+      <section id="services" class="container services-container">
+        <span class="section-header">Our services</span>
+        <h2 class="main-text">See what we render</h2>
+
+        <!-- Services list -->
+        <div class="grid services-grid">
+          <!-- Services -->
+          <div class="card services-item">
+            <img
+              src="./images/social-media-management.jpg"
+              alt="Social Media Management"
+              class="services-item-image"
+            />
+            <h3 class="sevices-item-body-main-text">Social Media Management</h3>
+            <span class="sub-text sevices-item-body-sub-text">
+              Amplify your online influence with our Social Media Management.
+              We curate engaging content, foster audience interaction, and build
+              a robust brand presence across platforms. Elevate your social
+              media game and connect with your audience effectively through our
+              expert management services.
+            </span>
+            <button class="primary-button services-item-cta">Learn more</button>
+            <div class="services-item-body"></div>
+          </div>
+          <!--  -->
+          <div class="card services-item">
+            <img
+              src="./images/seo.jpg"
+              alt="Search Engine Optimization (SEO)"
+              class="services-item-image"
+            />
+            <h3 class="sevices-item-body-main-text">
+              Search Engine Optimization (SEO)
+            </h3>
+            <span class="sub-text sevices-item-body-sub-text">
+              Transform your online presence with our SEO expertise. We optimize
+              your digital assets, improve search engine rankings, and drive
+              organic traffic. Stay ahead in the digital landscape with our
+              strategic SEO solutions.
+            </span>
+            <button class="primary-button services-item-cta">Learn more</button>
+            <div class="services-item-body"></div>
+          </div>
+          <!--  -->
+          <div class="card services-item">
+            <img
+              src="./images/advertising.jpg"
+              alt="Paid Advertising"
+              class="services-item-image"
+            />
+            <h3 class="sevices-item-body-main-text">Paid Advertising</h3>
+            <span class="sub-text sevices-item-body-sub-text">
+              Elevate your brand with our Paid Advertising services. We craft
+              targeted campaigns for maximum ROI, ensuring your business stands
+              out. Drive results, boost conversions, and stay ahead in the
+              digital landscape with our expert solutions.
+            </span>
+            <button class="primary-button services-item-cta">Learn more</button>
+            <div class="services-item-body"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial section -->
+
+      <section
+        id="testimonial"
+        class="container testimonial-container mySwiper"
+      >
+        <span class="section-header">Testimonial</span>
+        <h2 class="main-text">See what people are saying</h2>
+        
+        <div class="swiper-wrapper testimonial-swiper">
+          <article class="swiper-slide testimonial-slide">
+            <div class="testimonial-item">
+              <img src="./images/teacher.png" class="testimonial-profile" />
+              <h4 class="testimonial-item-name">JoT logistics</h4>
+              <span class="sub-text testimonial-text"
+                >"Mastering Project Management with Schoolarly has been a
+                game-changer for our team. Their strategic approach and
+                effective planning have significantly improved project outcomes.
+                Schoolarly's expertise has not only elevated our initiatives but
+                also propelled our team's professional growth. A valuable asset
+                for any project!"</span
+              >
+            </div>
+          </article>
+
+          <article class="swiper-slide testimonial-slide">
+            <div class="testimonial-item">
+              <img src="./images/teacher.png" class="testimonial-profile" />
+              <h4 class="testimonial-item-name">Devfreeguy</h4>
+              <span class="sub-text testimonial-text"
+                >"Exploring the depths of Data Science has been a game-changer
+                for my career. Mastering this dynamic category has equipped me
+                with the analytical prowess to unearth valuable insights,
+                transforming how I approach challenges and opening doors to
+                exciting opportunities. Truly a transformative journey!"</span
+              >
+            </div>
+          </article>
+
+          <article class="swiper-slide testimonial-slide">
+            <div class="testimonial-item">
+              <img src="./images/teacher.png" class="testimonial-profile" />
+              <h4 class="testimonial-item-name">PenTouch Graphics</h4>
+              <span class="sub-text testimonial-text"
+                >"Mastering Graphic Design has been a game-changer for my
+                career. The creative skills I've acquired not only allowed me to
+                produce visually stunning projects but also set me apart in a
+                competitive market. It's the key to unlocking endless
+                possibilities in the world of design!"</span
+              >
+            </div>
+          </article>
+
+          <article class="swiper-slide testimonial-slide">
+            <div class="testimonial-item">
+              <img src="./images/teacher.png" class="testimonial-profile" />
+              <h4 class="testimonial-item-name">Eve Marketers</h4>
+              <span class="sub-text testimonial-text"
+                >"Exploring the intricacies of Digital Marketing has been a
+                game-changer for my career. The acquired skills in online
+                promotion and brand building have not only advanced my
+                professional journey but also enabled me to navigate the
+                ever-evolving digital landscape with confidence. A
+                transformative experience indeed!"</span
+                >
+              </div>
+          </article>
+        </div>
+      </section>
+      
+      <!-- Contact section -->
+      
+      <section id="contact" class="container card contact-container">
+        <span class="section-header">Contact</span>
+        <h2 class="main-text">Get in touch with us</h2>
+
+        <div class="contact-form-holder">
+          <img src="./images/contact.svg" alt="" class="contact-form-image">
+
+          <form action="#" class="contact-form">
+            <input type="text" id="fullname" placeholder="Fullname" class="input-field contact-form-input">
+            <input type="email" id="email" placeholder="Email address" class="input-field contact-form-input">
+            <textarea id="message" placeholder="Message" rows="5" class="input-field contact-form-input"></textarea>
+            
+            <button class="primary-button services-item-cta">Submit</button>
+          </form>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+       <div class="container footer-container">
+
+         <section class="footer-header">
+           <!-- Logo -->
+        <h3 class="normal-text">SCHOOLARLY</h3>
+        <!-- Expansion icon -->
+        <i class="ri-arrow-up-s-line icon footer-expansion"></i>
+      </section>
+      <ul class="footer-body">
+          <a href="#">
+            <li class="nav-item">Home</li>
+          </a>
+          <a href="#categories">
+            <li class="nav-item">Categories</li>
+          </a>
+          <a href="#services">
+            <li class="nav-item">Services</li>
+          </a>
+          <a href="#testimonial">
+            <li class="nav-item">Testimonial</li>
+          </a>
+        </ul>
+        <!-- <section class="footer-body">
+      </section> -->
+      <span class="footer-credit">&copy; All right reserved</span>
+    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+
+    <!--Swiper Js script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      //Swiper Js
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        //Responsiveness
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          576: {
+            slidesPerView: 1,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
