@@ -21,7 +21,7 @@
     <!--SwiperJs starts-->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.css"
     />
     <!--SwiperJs endss-->
 
@@ -177,11 +177,11 @@
             />
             <h3 class="sevices-item-body-main-text">Social Media Management</h3>
             <span class="sub-text sevices-item-body-sub-text">
-              Amplify your online influence with our Social Media Management.
-              We curate engaging content, foster audience interaction, and build
-              a robust brand presence across platforms. Elevate your social
-              media game and connect with your audience effectively through our
-              expert management services.
+              Amplify your online influence with our Social Media Management. We
+              curate engaging content, foster audience interaction, and build a
+              robust brand presence across platforms. Elevate your social media
+              game and connect with your audience effectively through our expert
+              management services.
             </span>
             <button class="primary-button services-item-cta">Learn more</button>
             <div class="services-item-body"></div>
@@ -233,7 +233,7 @@
       >
         <span class="section-header">Testimonial</span>
         <h2 class="main-text">See what people are saying</h2>
-        
+
         <div class="swiper-wrapper testimonial-swiper">
           <article class="swiper-slide testimonial-slide">
             <div class="testimonial-item">
@@ -289,44 +289,64 @@
                 professional journey but also enabled me to navigate the
                 ever-evolving digital landscape with confidence. A
                 transformative experience indeed!"</span
-                >
-              </div>
+              >
+            </div>
           </article>
         </div>
+        <div class="testimonial-action">
+          <i class="ri-arrow-left-s-line swiper-button-prev big-icon testimonial-prev"></i>
+          <div class="swiper-pagination testimonial-pagination"></div>
+          <i class="ri-arrow-right-s-line swiper-button-next big-icon testimonial-next"></i>
+        </div>
       </section>
-      
+
       <!-- Contact section -->
-      
+
       <section id="contact" class="container card contact-container">
         <span class="section-header">Contact</span>
         <h2 class="main-text">Get in touch with us</h2>
 
         <div class="contact-form-holder">
-          <img src="./images/contact.svg" alt="" class="contact-form-image">
+          <img src="./images/contact.svg" alt="" class="contact-form-image" />
 
           <form action="#" class="contact-form">
-            <input type="text" id="fullname" placeholder="Fullname" class="input-field contact-form-input">
-            <input type="email" id="email" placeholder="Email address" class="input-field contact-form-input">
-            <textarea id="message" placeholder="Message" rows="5" class="input-field contact-form-input"></textarea>
-            
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Fullname"
+              class="input-field contact-form-input"
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email address"
+              class="input-field contact-form-input"
+            />
+            <textarea
+              id="message"
+              placeholder="Message"
+              rows="5"
+              class="input-field contact-form-input"
+            ></textarea>
+
             <button class="primary-button services-item-cta">Submit</button>
           </form>
         </div>
-
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-       <div class="container footer-container">
-
-         <section class="footer-header">
-           <!-- Logo -->
-        <h3 class="normal-text">SCHOOLARLY</h3>
-        <!-- Expansion icon -->
-        <i class="ri-arrow-up-s-line icon footer-expansion"></i>
-      </section>
-      <ul class="footer-body">
+      <div class="container footer-container">
+        <section class="footer-header">
+          <!-- Logo -->
+          <h3 class="normal-text">SCHOOLARLY</h3>
+          <!-- Expansion icon -->
+          <a href="#">
+            <i class="ri-arrow-up-s-line icon footer-expansion"></i>
+          </a>
+        </section>
+        <ul class="footer-body">
           <a href="#">
             <li class="nav-item">Home</li>
           </a>
@@ -340,10 +360,8 @@
             <li class="nav-item">Testimonial</li>
           </a>
         </ul>
-        <!-- <section class="footer-body">
-      </section> -->
-      <span class="footer-credit">&copy; All right reserved</span>
-    </div>
+        <span class="footer-credit">&copy; All right reserved</span>
+      </div>
     </footer>
 
     <!-- Scripts -->
@@ -356,6 +374,17 @@
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         //Responsiveness
         breakpoints: {
           768: {

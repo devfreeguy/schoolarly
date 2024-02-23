@@ -15,6 +15,7 @@
 
   /* Padding */
   --padding: 2rem;
+  --sub-padding: 1rem;
   --button-padding: 1rem 1.5rem;
   --mini-button-padding: 10px 17px;
   --mini-padding: 5px;
@@ -24,6 +25,18 @@
 
   /* Gaps */
   --gap: 8px;
+
+  /* Swiper styles */
+
+  --swiper-pagination-color: var(--primary-color);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: var(--card-color);
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: var(--gap);
 }
 
 [theme-data="dark"] {
@@ -104,6 +117,10 @@ a {
 
 .icon {
   font-size: clamp(14px, 4vw, 20px);
+}
+
+.big-icon {
+  font-size: clamp(20px, 6vw, 26px);
 }
 
 h1,
@@ -337,6 +354,7 @@ button.services-item-cta {
 
 .testimonial-swiper {
   padding: var(--padding);
+  padding-bottom: var(--sub-padding);
 }
 
 .testimonial-item {
@@ -355,6 +373,39 @@ button.services-item-cta {
   height: 60px;
   border-radius: 50rem;
   object-fit: cover;
+}
+
+.testimonial-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 450px;
+  width: 80%;
+  padding: var(--sub-padding);
+  margin-bottom: var(--padding);
+  position: relative !important;
+}
+
+.testimonial-pagination {
+  position: static;
+}
+
+.testimonial-prev::after,
+.testimonial-next::after {
+  display: none;
+}
+
+.testimonial-prev,
+.testimonial-next {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  background: var(--card-color);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color);
 }
 
 /* Contact styles */
@@ -439,6 +490,7 @@ footer {
   .footer-container {
     flex-direction: column;
     height: fit-content;
+    align-items: flex-start;
   }
 
   .footer-header {
@@ -448,15 +500,25 @@ footer {
 
   .footer-expansion {
     display: flex;
+    padding: var(--mini-padding);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
   }
 
   .footer-body {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
-  .footer-expansion:hover .footer-body,
-  .footer-body:hover .footer-body {
-    display: flex;
+  .footer-body li.nav-item,
+  .footer-credit {
+    margin: 0 !important;
+    padding: var(--mini-padding) 0 !important;
+  }
+
+  .footer-credit {
+    margin-bottom: 1rem !important;
   }
 }
 

@@ -7,7 +7,8 @@ const NAV_ITEMS = document.querySelectorAll(".nav-item");
 const NAV = document.getElementById("nav");
 const THEME_TOGGLE = document.getElementById("theme-toggle");
 const BODY = document.querySelector("body");
-let isDark = localStorage.getItem("theme") == 'dark';
+let themeData = localStorage.getItem("theme");
+let isDark = themeData == "dark";
 
 // Toggle menu function
 OPEN_MENU.addEventListener("click", () => {
@@ -26,27 +27,37 @@ NAV_ITEMS.forEach((item) => {
 });
 
 // Theme Toggle
-window.addEventListener('click', ()=>{
-  BODY.setAttribute("theme-data", isDark ? "dark" : "light");
-  if(isDark){
+window.addEventListener("load", () => {
+  // onThemeToggle()
+  BODY.setAttribute("theme-data", themeData);
+  if (isDark) {
     THEME_TOGGLE.classList.remove("ri-moon-fill");
     THEME_TOGGLE.classList.add("ri-sun-fill");
-  }else{
-    THEME_TOGGLE.classList.add("ri-moon-fill");
+  } else {
     THEME_TOGGLE.classList.remove("ri-sun-fill");
-  }
-})
-
-
-THEME_TOGGLE.addEventListener("click", () => {
-  isDark = !isDark;
-  localStorage.setItem("theme", isDark ? "light" : "dark");
-  BODY.setAttribute("theme-data", isDark ? "light" : "dark");
-  if(isDark){
-    THEME_TOGGLE.classList.remove("ri-moon-fill");
-    THEME_TOGGLE.classList.add("ri-sun-fill");
-  }else{
     THEME_TOGGLE.classList.add("ri-moon-fill");
-    THEME_TOGGLE.classList.remove("ri-sun-fill");
   }
 });
+
+THEME_TOGGLE.addEventListener("click", () => {
+  onThemeToggle()
+  if (isDark) {
+    THEME_TOGGLE.classList.remove("ri-moon-fill");
+    THEME_TOGGLE.classList.add("ri-sun-fill");
+  } else {
+    THEME_TOGGLE.classList.remove("ri-sun-fill");
+    THEME_TOGGLE.classList.add("ri-moon-fill");
+  }
+  BODY.setAttribute("theme-data", themeData);
+});
+
+function onThemeToggle(){
+  localStorage.setItem('theme-data', isDark ? "light" : "dark")
+  themeData = localStorage.getItem('theme-data')
+  isDark = themeData == "dark";
+}
+
+const FOOTER_CREDIT =document.querySelector('.footer-credit');
+const date = new Date;
+
+FOOTER_CREDIT.innerHTML = `&copy; All right reserved &bull; ${date.getFullYear()}`;
