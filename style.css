@@ -62,6 +62,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding: 4.3rem;
+  overflow-x: hidden;
 }
 
 body {
@@ -353,8 +354,12 @@ button.services-item-cta {
 }
 
 .testimonial-swiper {
-  padding: var(--padding);
+  padding: var(--padding) 0;
   padding-bottom: var(--sub-padding);
+}
+
+.swiper {
+  width: 100%;
 }
 
 .testimonial-item {
@@ -366,6 +371,7 @@ button.services-item-cta {
   background-color: var(--card-color);
   height: 100%;
   width: 100%;
+  /* margin: 5px 0; */
 }
 
 .testimonial-profile {
